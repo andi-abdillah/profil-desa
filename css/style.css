@@ -13,9 +13,10 @@
 .dropdown-content {
   display: none;
   position: absolute;
+	margin-top: 6px;
   min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+	z-index: 999;
 }
 
 .dropdown-content a {
@@ -27,14 +28,19 @@
 
 .dropdown:hover .dropdown-content {
 	display: block;
-	z-index: 999;
 	background-color: white;
 }
 
+
 @media (max-width: 1199px) {
-	 .dropbtn {
-		width: 350px;
+	.dropbtn {
+		width: 270px;
 		text-align: left;
+	}
+	.dropdown-content {
+		margin-top: 0px;
+		font-size: 10px;
+		right: 0%;
 	}
 }
 
@@ -7422,7 +7428,7 @@ html.rd-navbar-fixed-linked .page {
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 22px 60px 22px 0;
 	max-width: 1200px;
 	margin-left: auto;
@@ -7869,7 +7875,7 @@ html.rd-navbar-fixed-linked .page {
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-nav {
 	order: -1;
-	margin-right: 46px;
+	margin-right: 20px;
 }
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-brand img {
