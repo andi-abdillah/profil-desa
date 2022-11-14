@@ -7817,11 +7817,11 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-classic.rd-navbar-static .rd-navbar-main {
 	display: flex;
 	align-items: baseline;
-	justify-content: space-between;
+	justify-content: space-around;
 	max-width: 1770px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 16px 0px 14px 0;
+	padding: 16px 0 14px 0;
 	transition: padding .35s ease-in-out;
 }
 
