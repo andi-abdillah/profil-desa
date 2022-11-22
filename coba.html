@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .option-box {
+      display: inline-block;
+      border: 1px solid #c4c4c4;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 20px 0 30px 20px;
+    }
+
+    .menu-option {
+      display: inline-block;
+      margin: 10px 20px;
+    }
+
+    .option-box,
+    .menu-option {
+      cursor: pointer;
+    }
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    .option {
+      margin-bottom: 20px;
+    }
+
+    .load-more {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      background: goldenrod;
+      padding: 12px;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .no-content-container {
+      margin-left: 20px;
+      text-align: center;
+      display: none;
+    }
+
+    .no-content-container.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="option-box">
+    <span class="active-option">All Options</span>
+  </div>
+  <div class="options-container">
+      <span class="menu-option" id="option">All Options</span>
+      <span class="menu-option" id="option-1">Option 1</span>
+      <span class="menu-option" id="option-2">Option 2</span>
+      <span class="menu-option" id="option-3">Option 3</span>
+      <span class="menu-option" id="option-4">Option 4</span>
+    <span class="menu-option" id="option-5">Option 5</span>
+  </div>
+  <div class="container">
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div><div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-3">
+      Option 3 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <div class="option option-4">
+      Option 4 Content
+    </div>
+    <div class="option option-1">
+      Option 1 Content
+    </div>
+    <div class="option option-2">
+      Option 2 Content
+    </div>
+    <a href="" class="load-more">load more</a>
+    <div class="no-content-container">No content matches the selected option</div>
+  </div>
+  <script>
+    var options = $('.menu-option');
+    var active_option = $('.active-option');
+    var option_contents = $('div.option');
+    options.click(function(event){
+      option_contents.hide();
+      active_option.text(event.target.innerText);
+      option_contents.filter('.' + event.target.id).show();
+    });
+  </script>
+</body>
+</html>
